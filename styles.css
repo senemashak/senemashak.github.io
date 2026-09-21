@@ -69,6 +69,7 @@ p { margin: 0 0 14px; }
 .portrait {
   grid-area: portrait;
   margin: 0;
+  max-width: 170px; /* The rule underneath ends where the photograph ends. */
   align-self: stretch;
   padding-bottom: 24px;
   border-bottom: 1px solid var(--rule);
@@ -143,7 +144,7 @@ p { margin: 0 0 14px; }
     grid-template-areas: "portrait" "intro" "main" "side";
     column-gap: 0;
   }
-  .portrait { border: 0; padding: 0; margin-bottom: 26px; }
+  .portrait { border: 0; padding: 0; margin-bottom: 26px; max-width: none; }
   .portrait a { width: min(170px, 100%); margin-inline: auto; }
   .portrait img { max-width: 170px; }
   #intro { padding-bottom: 25px; }
