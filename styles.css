@@ -11,6 +11,7 @@
   --orange: #a95730;
   --stanford-red: #5e0d0d;
   --muted-blue: #456a82;
+  --soft-black: #5b564e;
   --muted: #736e65;
   --rule: #d7d0c4;
   --font: Georgia, "Times New Roman", serif;
@@ -77,7 +78,7 @@ p { margin: 0 0 14px; }
 .portrait a { display: block; }
 .portrait img { display: block; width: 100%; max-width: 170px; height: auto; }
 .email { margin-top: 20px; margin-bottom: 0; }
-.email a, .email a:visited { color: var(--black); }
+.email a, .email a:visited { color: var(--soft-black); }
 .section { padding-top: 9px; scroll-margin-top: 24px; }
 #intro { scroll-margin-top: 24px; }
 .separated { margin-top: 9px; border-top: 1px solid var(--rule); }
@@ -96,7 +97,9 @@ p { margin: 0 0 14px; }
 .paper a, .paper a:visited { color: inherit; }
 .paper .award, .paper .award:visited, .award { color: var(--orange); }
 .resources a + a { margin-left: 7px; }
-.status { color: var(--text); }
+/* Supporting lines — venues, status, instructors, the email — sit a shade
+   lighter than the body text. */
+.venue, .status { color: var(--soft-black); }
 
 /* News remains below the full portrait on desktop. */
 .news { font-size: 0.9375rem; }
@@ -115,6 +118,7 @@ p { margin: 0 0 14px; }
 .entry-heading h3, .entry-heading h4 { margin: 0 0 2px; font-size: 1.0625rem; font-weight: 700; flex: 1 1 210px; }
 .entry-heading .date { margin-left: auto; color: var(--muted); font-size: 0.84375rem; white-space: nowrap; }
 .experience-entry p, .teaching-entry p { margin: 0; }
+.teaching-entry p { color: var(--soft-black); }
 .experience-entry a, .experience-entry a:visited, .teaching-entry a, .teaching-entry a:visited { color: inherit; }
 .teaching-entry .addiscoder, .teaching-entry .addiscoder:visited { color: var(--blue); }
 .reviewer { margin: 25px 0 0; }
