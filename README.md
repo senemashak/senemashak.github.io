@@ -6,7 +6,7 @@ This folder contains an editable static website prepared for **senemashak.github
 
 Extract the ZIP first, then open `index.html` in a web browser. Keep `styles.css`, both favicon files, and the `assets` folder next to it. The full-resolution photo is `assets/photo.png`.
 
-Click the flower or “Expository” heading to show or hide the writing section. It starts closed. The top navigation scrolls to the heading without opening it.
+Click any flower heading — Research, News, Experience, Teaching, or Expository — to show or hide that section. All five start closed, and a link in the top menu opens the section it points to.
 
 ## 2. Put the site on GitHub Pages
 
