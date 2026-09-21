@@ -10,11 +10,12 @@
   --green: #4b694e;
   --orange: #a95730;
   --stanford-red: #8c1515;
+  --muted-blue: #456a82;
   --muted: #736e65;
   --rule: #d7d0c4;
   --font: Georgia, "Times New Roman", serif;
   font-family: var(--font);
-  font-size: 97%; /* A small, consistent reduction across the site. */
+  font-size: 84%; /* A consistent reduction across the whole site. */
   scrollbar-gutter: stable;
 }
 * { box-sizing: border-box; }
@@ -38,24 +39,25 @@ a:focus-visible, summary:focus-visible {
   padding: 40px 24px 80px;
   margin-inline: auto;
 }
-.site-header { margin-bottom: 34px; }
+/* Name at the top left, menu on the same line at the top right. */
+.site-header { display: flex; flex-wrap: wrap; align-items: baseline; column-gap: 30px; row-gap: 8px; margin-bottom: 30px; }
 h1 {
-  margin: 0 0 14px;
-  font-size: 2.6rem;
+  margin: 0;
+  font-size: 2.2rem;
   font-weight: 400;
   line-height: 1.2;
   letter-spacing: -0.035em;
   color: var(--black);
 }
-nav { display: flex; flex-wrap: wrap; column-gap: 26px; row-gap: 10px; font-size: 0.9375rem; line-height: 1.6; }
-h2 { color: var(--green); font-weight: 400; font-size: 1.5rem; line-height: 1.3; margin: 0 0 16px; }
+nav { display: flex; flex-wrap: wrap; justify-content: flex-end; margin-left: auto; column-gap: 24px; row-gap: 8px; font-size: 0.9375rem; line-height: 1.6; }
+h2 { color: var(--green); font-weight: 400; font-size: 1.4rem; line-height: 1.3; margin: 0 0 16px; }
 h3, h4 { color: var(--black); line-height: 1.4; }
 p { margin: 0 0 14px; }
 .page-grid {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) 280px;
+  grid-template-columns: minmax(0, 1fr) 200px;
   grid-template-areas:
-    "about portrait"
+    "intro portrait"
     "research news"
     "experience news"
     "teaching news"
@@ -64,7 +66,7 @@ p { margin: 0 0 14px; }
   align-items: start;
 }
 .page-grid > * { min-width: 0; }
-#about { grid-area: about; align-self: stretch; padding-bottom: 24px; border-bottom: 1px solid var(--rule); }
+#intro { grid-area: intro; align-self: stretch; padding-bottom: 24px; border-bottom: 1px solid var(--rule); }
 #research { grid-area: research; }
 #experience { grid-area: experience; }
 #teaching { grid-area: teaching; }
@@ -78,15 +80,14 @@ p { margin: 0 0 14px; }
   border-bottom: 1px solid var(--rule);
 }
 .portrait a { display: block; }
-.portrait img { display: block; width: 100%; max-width: 280px; height: auto; }
+.portrait img { display: block; width: 100%; max-width: 200px; height: auto; }
 .email { margin-top: 20px; margin-bottom: 0; }
-.email a { margin-left: 5px; }
 .section { padding-top: 26px; scroll-margin-top: 24px; }
-#about { scroll-margin-top: 24px; }
+#intro { scroll-margin-top: 24px; }
 .separated { margin-top: 30px; border-top: 1px solid var(--rule); }
-.affiliations { margin-bottom: 24px; }
 .stanford-red, .stanford-red:visited { color: var(--stanford-red); }
 .green, .green:visited { color: var(--green); }
+.muted-blue, .muted-blue:visited { color: var(--muted-blue); }
 .orange, .orange:visited { color: var(--orange); }
 .text-link, .text-link:visited { color: inherit; }
 
@@ -111,7 +112,7 @@ p { margin: 0 0 14px; }
 
 /* Experience subsection headings are bold orange; entry titles are bold black. */
 .subheading { margin: 25px 0 17px; color: var(--orange); font-size: 1.125rem; font-weight: 700; }
-#experience > h2 + .subheading { margin-top: 0; }
+.toggle-content > .subheading:first-child { margin-top: 0; }
 .experience-entry, .teaching-entry { margin-bottom: 20px; }
 .experience-entry:last-child, .teaching-entry:last-child { margin-bottom: 0; }
 .entry-heading { display: flex; justify-content: space-between; align-items: baseline; gap: 8px 20px; flex-wrap: wrap; }
@@ -122,14 +123,14 @@ p { margin: 0 0 14px; }
 .teaching-entry .addiscoder, .teaching-entry .addiscoder:visited { color: var(--blue); }
 .reviewer { margin: 25px 0 0; }
 
-/* Native, accessible disclosure: closed by default, with a flower instead of an arrow. */
-.expository summary { list-style: none; cursor: pointer; width: fit-content; }
-.expository summary::-webkit-details-marker { display: none; }
-.expository summary::marker { content: ""; }
-.expository summary h2 { display: inline-flex; align-items: center; gap: 9px; margin: 0; }
-.expository .flower { display: block; width: 24px; height: 24px; flex-shrink: 0; transition: transform 150ms ease; }
-.expository[open] .flower { transform: rotate(30deg); }
-.expository-content { padding-top: 20px; }
+/* Native, accessible disclosures: every flower heading opens and closes its section. */
+.toggle > summary { list-style: none; cursor: pointer; width: fit-content; }
+.toggle > summary::-webkit-details-marker { display: none; }
+.toggle > summary::marker { content: ""; }
+.toggle > summary h2 { display: inline-flex; align-items: center; gap: 9px; margin: 0; }
+.toggle .flower { display: block; width: 24px; height: 24px; flex-shrink: 0; transition: transform 150ms ease; }
+.toggle[open] > summary .flower { transform: rotate(30deg); }
+.toggle-content { padding-top: 20px; }
 .writing-entry { margin-bottom: 23px; }
 .writing-entry:last-child { margin-bottom: 0; }
 .writing-entry h3 { margin: 0 0 5px; font-size: 1.0625rem; font-weight: 700; }
@@ -140,18 +141,18 @@ p { margin: 0 0 14px; }
 
 @media (max-width: 800px) {
   .site { padding: 24px 18px 56px; }
-  .site-header { margin-bottom: 30px; }
-  h1 { font-size: 2.35rem; }
+  .site-header { margin-bottom: 26px; }
+  h1 { font-size: 2rem; }
   nav { column-gap: 20px; }
   .page-grid {
     grid-template-columns: minmax(0, 1fr);
-    grid-template-areas: "portrait" "about" "research" "experience" "teaching" "expository" "news";
+    grid-template-areas: "portrait" "intro" "research" "experience" "teaching" "expository" "news";
     column-gap: 0;
   }
   .portrait { border: 0; padding: 0; margin-bottom: 26px; }
-  .portrait a { width: min(270px, 100%); margin-inline: auto; }
-  .portrait img { max-width: 270px; }
-  #about { padding-bottom: 25px; }
+  .portrait a { width: min(200px, 100%); margin-inline: auto; }
+  .portrait img { max-width: 200px; }
+  #intro { padding-bottom: 25px; }
   .news { border-top: 1px solid var(--rule); margin-top: 30px; }
 }
 @media (max-width: 480px) {
