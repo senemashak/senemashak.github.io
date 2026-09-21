@@ -119,7 +119,7 @@ p { margin: 0 0 14px; }
 .entry-heading h3, .entry-heading h4 { margin: 0 0 2px; font-size: 1.0625rem; font-weight: 700; flex: 1 1 210px; }
 .entry-heading .date { margin-left: auto; color: var(--muted); font-size: 0.84375rem; white-space: nowrap; }
 .experience-entry p, .teaching-entry p { margin: 0; }
-.teaching-entry p { color: var(--soft-black); }
+.experience-entry p, .teaching-entry p { color: var(--soft-black); }
 .experience-entry a, .experience-entry a:visited, .teaching-entry a, .teaching-entry a:visited { color: inherit; }
 .teaching-entry .addiscoder, .teaching-entry .addiscoder:visited { color: var(--blue); }
 .reviewer { margin: 25px 0 0; }
