@@ -27,6 +27,8 @@ favicon.svg            Flower used in the tab and Expository toggle
 favicon.ico            Browser fallback for the same flower
 assets/
   photo.png            Original 898 × 1282 photograph, unchanged
+files/
+  *.pdf                Posters, slides, thesis, and expository writing
 .nojekyll              Tells GitHub Pages to serve the static files directly
 README.md              These setup and editing instructions
 PROVENANCE.md          Reconstruction notes and items to review
@@ -79,7 +81,7 @@ The palette is at the top of `styles.css`. The page and titles use the same seri
 
 Review the site on a wide screen and on your phone. Check the intro/photo divider, the email, a paper resource link, the flower toggle, and any URLs you changed. If the GitHub site still shows an old version, check that the deployment finished, then refresh the page.
 
-The website itself has no analytics, third-party scripts, font downloads, or embedded credentials. Its one script, at the bottom of `index.html`, does a single thing: when someone arrives at an address ending in `#research` or another section name, it opens that section. With JavaScript switched off, every heading still opens by being clicked. The paper PDFs, posters, slides, and pronunciation audio are **external links**, not files included in this ZIP. Check the sharing permissions of those linked documents before relying on public access.
+The website itself has no analytics, third-party scripts, font downloads, or embedded credentials. Its one script, at the bottom of `index.html`, does a single thing: when someone arrives at an address ending in `#research` or another section name, it opens that section. With JavaScript switched off, every heading still opens by being clicked. The posters, slides, thesis, and expository PDFs are served from `files/` in this repository, so they no longer depend on Google Drive sharing settings. To replace one, upload a PDF of the same filename. The pronunciation audio and the arXiv papers are still **external links**.
 
 ## Official GitHub instructions
 
