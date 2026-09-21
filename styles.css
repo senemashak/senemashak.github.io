@@ -1,0 +1,173 @@
+/* Senem Işık — portable academic website.
+   Change palette values here. All text stays in the same serif family.
+   This file uses no external fonts or libraries. */
+:root {
+  color-scheme: light;
+  --background: #f6f2e9;
+  --text: #292722;
+  --black: #111111;
+  --blue: #456a82;
+  --green: #4b694e;
+  --orange: #a95730;
+  --stanford-red: #8c1515;
+  --muted: #736e65;
+  --rule: #d7d0c4;
+  --font: Georgia, "Times New Roman", serif;
+  font-family: var(--font);
+  font-size: 97%; /* A small, consistent reduction across the site. */
+  scrollbar-gutter: stable;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--background);
+  color: var(--text);
+  font-size: 1rem;
+  line-height: 1.65;
+}
+a { color: var(--blue); text-decoration: none; text-underline-offset: 0.18em; }
+a:visited { color: var(--blue); }
+a:hover { text-decoration: underline; }
+a:focus-visible, summary:focus-visible {
+  outline: 2px solid var(--blue);
+  outline-offset: 4px;
+  border-radius: 2px;
+}
+.site {
+  max-width: 1088px;
+  padding: 40px 24px 80px;
+  margin-inline: auto;
+}
+.site-header { margin-bottom: 34px; }
+h1 {
+  margin: 0 0 14px;
+  font-size: 2.6rem;
+  font-weight: 400;
+  line-height: 1.2;
+  letter-spacing: -0.035em;
+  color: var(--black);
+}
+nav { display: flex; flex-wrap: wrap; column-gap: 26px; row-gap: 10px; font-size: 0.9375rem; line-height: 1.6; }
+h2 { color: var(--green); font-weight: 400; font-size: 1.5rem; line-height: 1.3; margin: 0 0 16px; }
+h3, h4 { color: var(--black); line-height: 1.4; }
+p { margin: 0 0 14px; }
+.page-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 280px;
+  grid-template-areas:
+    "about portrait"
+    "research news"
+    "experience news"
+    "teaching news"
+    "expository news";
+  column-gap: 52px;
+  align-items: start;
+}
+.page-grid > * { min-width: 0; }
+#about { grid-area: about; align-self: stretch; padding-bottom: 24px; border-bottom: 1px solid var(--rule); }
+#research { grid-area: research; }
+#experience { grid-area: experience; }
+#teaching { grid-area: teaching; }
+#expository { grid-area: expository; }
+#news { grid-area: news; }
+.portrait {
+  grid-area: portrait;
+  margin: 0;
+  align-self: stretch;
+  padding-bottom: 24px;
+  border-bottom: 1px solid var(--rule);
+}
+.portrait a { display: block; }
+.portrait img { display: block; width: 100%; max-width: 280px; height: auto; }
+.email { margin-top: 20px; margin-bottom: 0; }
+.email a { margin-left: 5px; }
+.section { padding-top: 26px; scroll-margin-top: 24px; }
+#about { scroll-margin-top: 24px; }
+.separated { margin-top: 30px; border-top: 1px solid var(--rule); }
+.affiliations { margin-bottom: 24px; }
+.stanford-red, .stanford-red:visited { color: var(--stanford-red); }
+.green, .green:visited { color: var(--green); }
+.orange, .orange:visited { color: var(--orange); }
+.text-link, .text-link:visited { color: inherit; }
+
+/* Research titles, authors, conferences, and resource links retain their text color. */
+.paper { margin-bottom: 26px; }
+.paper:last-child { margin-bottom: 0; }
+.paper h3 { margin: 0 0 4px; font-size: 1.0625rem; font-weight: 700; }
+.paper p { margin: 0 0 3px; font-size: 0.96875rem; }
+.paper p:last-child { margin-bottom: 0; }
+.paper a, .paper a:visited { color: inherit; }
+.paper .award, .paper .award:visited, .award { color: var(--orange); }
+.resources a + a { margin-left: 7px; }
+.status { color: var(--text); }
+
+/* News remains below the full portrait on desktop. */
+.news { font-size: 0.9375rem; }
+.news-list { list-style: none; margin: 0; padding: 0; }
+.news-list li { margin: 0 0 21px; }
+.news-list li:last-child { margin-bottom: 0; }
+.news-list time { display: block; margin-bottom: 3px; color: var(--muted); font-size: 0.84375rem; }
+.news-list p { margin: 0; }
+
+/* Experience subsection headings are bold orange; entry titles are bold black. */
+.subheading { margin: 25px 0 17px; color: var(--orange); font-size: 1.125rem; font-weight: 700; }
+#experience > h2 + .subheading { margin-top: 0; }
+.experience-entry, .teaching-entry { margin-bottom: 20px; }
+.experience-entry:last-child, .teaching-entry:last-child { margin-bottom: 0; }
+.entry-heading { display: flex; justify-content: space-between; align-items: baseline; gap: 8px 20px; flex-wrap: wrap; }
+.entry-heading h3, .entry-heading h4 { margin: 0 0 2px; font-size: 1.0625rem; font-weight: 700; flex: 1 1 210px; }
+.entry-heading .date { margin-left: auto; color: var(--muted); font-size: 0.84375rem; white-space: nowrap; }
+.experience-entry p, .teaching-entry p { margin: 0; }
+.experience-entry a, .experience-entry a:visited, .teaching-entry a, .teaching-entry a:visited { color: inherit; }
+.teaching-entry .addiscoder, .teaching-entry .addiscoder:visited { color: var(--blue); }
+.reviewer { margin: 25px 0 0; }
+
+/* Native, accessible disclosure: closed by default, with a flower instead of an arrow. */
+.expository summary { list-style: none; cursor: pointer; width: fit-content; }
+.expository summary::-webkit-details-marker { display: none; }
+.expository summary::marker { content: ""; }
+.expository summary h2 { display: inline-flex; align-items: center; gap: 9px; margin: 0; }
+.expository .flower { display: block; width: 24px; height: 24px; flex-shrink: 0; transition: transform 150ms ease; }
+.expository[open] .flower { transform: rotate(30deg); }
+.expository-content { padding-top: 20px; }
+.writing-entry { margin-bottom: 23px; }
+.writing-entry:last-child { margin-bottom: 0; }
+.writing-entry h3 { margin: 0 0 5px; font-size: 1.0625rem; font-weight: 700; }
+.writing-entry p { margin: 0; }
+.writing-entry a, .writing-entry a:visited { color: inherit; }
+.skip-link { position: fixed; top: 8px; left: 8px; padding: 8px 14px; background: var(--background); z-index: 10; transform: translateY(-160%); }
+.skip-link:focus { transform: translateY(0); }
+
+@media (max-width: 800px) {
+  .site { padding: 24px 18px 56px; }
+  .site-header { margin-bottom: 30px; }
+  h1 { font-size: 2.35rem; }
+  nav { column-gap: 20px; }
+  .page-grid {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-areas: "portrait" "about" "research" "experience" "teaching" "expository" "news";
+    column-gap: 0;
+  }
+  .portrait { border: 0; padding: 0; margin-bottom: 26px; }
+  .portrait a { width: min(270px, 100%); margin-inline: auto; }
+  .portrait img { max-width: 270px; }
+  #about { padding-bottom: 25px; }
+  .news { border-top: 1px solid var(--rule); margin-top: 30px; }
+}
+@media (max-width: 480px) {
+  .entry-heading { display: block; }
+  .entry-heading .date { display: block; margin: 0 0 3px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { transition: none !important; scroll-behavior: auto !important; }
+}
+@media print {
+  :root { font-size: 11pt; scrollbar-gutter: auto; }
+  body { background: white; color: black; }
+  .site { max-width: none; padding: 0; }
+  nav, .skip-link { display: none; }
+  .site-header { margin-bottom: 20px; }
+  .page-grid { display: block; }
+  .portrait { display: none; }
+  .paper, .experience-entry, .teaching-entry, .writing-entry { break-inside: avoid; }
+}
