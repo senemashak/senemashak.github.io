@@ -53,7 +53,7 @@ h3, h4 { color: var(--black); line-height: 1.4; }
 p { margin: 0 0 14px; }
 .page-grid {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) 140px;
+  grid-template-columns: minmax(0, 1fr) 240px;
   /* Two independent columns: opening News cannot stretch the sections
      beside it, and opening a section cannot move News. */
   grid-template-areas:
@@ -74,7 +74,7 @@ p { margin: 0 0 14px; }
   border-bottom: 1px solid var(--rule);
 }
 .portrait a { display: block; }
-.portrait img { display: block; width: 100%; max-width: 140px; height: auto; }
+.portrait img { display: block; width: 100%; max-width: 170px; height: auto; }
 .email { margin-top: 20px; margin-bottom: 0; }
 .section { padding-top: 9px; scroll-margin-top: 24px; }
 #intro { scroll-margin-top: 24px; }
@@ -99,7 +99,7 @@ p { margin: 0 0 14px; }
 /* News remains below the full portrait on desktop. */
 .news { font-size: 0.9375rem; }
 .news-list { list-style: none; margin: 0; padding: 0; }
-.news-list li { margin: 0 0 21px; }
+.news-list li { margin: 0 0 11px; }
 .news-list li:last-child { margin-bottom: 0; }
 .news-list time { display: block; margin-bottom: 3px; color: var(--muted); font-size: 0.84375rem; }
 .news-list p { margin: 0; }
@@ -144,8 +144,8 @@ p { margin: 0 0 14px; }
     column-gap: 0;
   }
   .portrait { border: 0; padding: 0; margin-bottom: 26px; }
-  .portrait a { width: min(140px, 100%); margin-inline: auto; }
-  .portrait img { max-width: 140px; }
+  .portrait a { width: min(170px, 100%); margin-inline: auto; }
+  .portrait img { max-width: 170px; }
   #intro { padding-bottom: 25px; }
   .news { border-top: 1px solid var(--rule); margin-top: 30px; }
 }
