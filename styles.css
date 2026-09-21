@@ -126,7 +126,7 @@ p { margin: 0 0 14px; }
 .toggle .flower { display: block; width: 20px; height: 20px; flex-shrink: 0; transition: transform 150ms ease; }
 .toggle[open] > summary .flower { transform: rotate(30deg); }
 .toggle-content { padding-top: 20px; }
-.writing-entry { margin-bottom: 23px; }
+.writing-entry { margin-bottom: 12px; }
 .writing-entry:last-child { margin-bottom: 0; }
 .writing-entry h3 { margin: 0 0 5px; font-size: 1.0625rem; font-weight: 700; }
 .writing-entry p { margin: 0; }
