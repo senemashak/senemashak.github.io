@@ -100,6 +100,7 @@ p { margin: 0 0 14px; }
 /* Supporting lines — venues, status, instructors, the email — sit a shade
    lighter than the body text. */
 .venue, .status, .resources, .note { color: var(--soft-black); }
+.alpha-beta { color: var(--soft-black); } /* The alphabetical-order marker, not the names. */
 
 /* News remains below the full portrait on desktop. */
 .news { font-size: 0.9375rem; }
