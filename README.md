@@ -73,7 +73,7 @@ Replace `assets/photo.png` with a new PNG of the same filename. The site shows t
 
 ### Change colors or font sizes
 
-The palette is at the top of `styles.css`. The page and titles use the same serif font family. The root `font-size: 84%` scales the text; changing that value changes the overall text size. Specific heading sizes are defined lower down. The photograph's width is set by the `200px` column in `.page-grid` and the matching `max-width` on `.portrait img`.
+The palette is at the top of `styles.css`. The page and titles use the same serif font family. The root `font-size: 84%` scales the text; changing that value changes the overall text size. Specific heading sizes are defined lower down. The photograph's width is set by the `160px` column in `.page-grid` and the matching `max-width` on `.portrait img`.
 
 ## 4. Check an update
 

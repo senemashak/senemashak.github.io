@@ -9,7 +9,7 @@
   --blue: #456a82;
   --green: #4b694e;
   --orange: #a95730;
-  --stanford-red: #8c1515;
+  --stanford-red: #6b0f0f;
   --muted-blue: #456a82;
   --muted: #736e65;
   --rule: #d7d0c4;
@@ -53,7 +53,7 @@ h3, h4 { color: var(--black); line-height: 1.4; }
 p { margin: 0 0 14px; }
 .page-grid {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) 200px;
+  grid-template-columns: minmax(0, 1fr) 160px;
   /* Two independent columns: opening News cannot stretch the sections
      beside it, and opening a section cannot move News. */
   grid-template-areas:
@@ -74,7 +74,7 @@ p { margin: 0 0 14px; }
   border-bottom: 1px solid var(--rule);
 }
 .portrait a { display: block; }
-.portrait img { display: block; width: 100%; max-width: 200px; height: auto; }
+.portrait img { display: block; width: 100%; max-width: 160px; height: auto; }
 .email { margin-top: 20px; margin-bottom: 0; }
 .section { padding-top: 26px; scroll-margin-top: 24px; }
 #intro { scroll-margin-top: 24px; }
@@ -144,8 +144,8 @@ p { margin: 0 0 14px; }
     column-gap: 0;
   }
   .portrait { border: 0; padding: 0; margin-bottom: 26px; }
-  .portrait a { width: min(200px, 100%); margin-inline: auto; }
-  .portrait img { max-width: 200px; }
+  .portrait a { width: min(160px, 100%); margin-inline: auto; }
+  .portrait img { max-width: 160px; }
   #intro { padding-bottom: 25px; }
   .news { border-top: 1px solid var(--rule); margin-top: 30px; }
 }
