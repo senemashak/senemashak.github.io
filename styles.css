@@ -99,7 +99,7 @@ p { margin: 0 0 14px; }
 .resources a + a { margin-left: 7px; }
 /* Supporting lines — venues, status, instructors, the email — sit a shade
    lighter than the body text. */
-.venue, .status { color: var(--soft-black); }
+.venue, .status, .resources, .note { color: var(--soft-black); }
 
 /* News remains below the full portrait on desktop. */
 .news { font-size: 0.9375rem; }
