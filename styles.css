@@ -132,7 +132,8 @@ p { margin: 0 0 14px; }
 .toggle > summary h2 { display: inline-flex; align-items: center; gap: 9px; margin: 0; }
 .toggle .flower { display: block; width: 20px; height: 20px; flex-shrink: 0; transition: transform 150ms ease; }
 .toggle[open] > summary .flower { transform: rotate(30deg); }
-.toggle-content { padding-top: 20px; }
+/* Breathing room between an open section's last line and the next divider. */
+.toggle-content { padding-top: 20px; padding-bottom: 20px; }
 .writing-entry { margin-bottom: 12px; }
 .writing-entry:last-child { margin-bottom: 0; }
 .writing-entry h3 { margin: 0 0 5px; font-size: 1.0625rem; font-weight: 400; }
