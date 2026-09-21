@@ -2,8 +2,6 @@
 
 This folder contains an editable static website prepared for **senemashak.github.io**. There is no build command, package manager, database, or ChatGPT connection to maintain. Your text is in `index.html`; the appearance is in `styles.css`.
 
-**Important:** this is a portable reconstruction from the saved previews, the original photo, the original Google Site, and the edits in the conversation. It is **not a direct export of the hosted ChatGPT site's source code**. The hosted source could not be retrieved. See `PROVENANCE.md` for the remaining link-review notes. No GitHub repository has been created or changed by this package.
-
 ## 1. Preview the files
 
 Extract the ZIP first, then open `index.html` in a web browser. Keep `styles.css`, both favicon files, and the `assets` folder next to it. The full-resolution photo is `assets/photo.png`.
@@ -63,7 +61,11 @@ Find `<!-- RESEARCH` and copy one complete `<article class="paper"> ... </articl
 
 ### Update Experience, Teaching, or Expository
 
-Each has an uppercase HTML comment to help you find it. Copy the appropriate complete `article` block for a new entry. Edit the expository text inside its existing `<details>` element; do not add an `open` attribute unless you decide it should start expanded.
+Each has an uppercase HTML comment to help you find it. Copy the appropriate complete `article` block for a new entry, keeping it inside that section's `<div class="toggle-content">`.
+
+### Open or close a section by default
+
+Research, News, Experience, Teaching, and Expository are each a `<details class="toggle">` element whose flower heading opens and closes it. All five start collapsed, so the page opens to the introduction, the photograph, and the five headings. To make one start expanded, add the word `open` to its opening tag, as in `<details id="research" class="section toggle" open>`; delete that word to collapse it again.
 
 ### Change the picture
 
@@ -71,13 +73,13 @@ Replace `assets/photo.png` with a new PNG of the same filename. The site shows t
 
 ### Change colors or font sizes
 
-The palette is at the top of `styles.css`. The page and titles use the same serif font family. The root `font-size: 97%` scales the text; changing that value changes the overall text size. Specific heading sizes are defined lower down.
+The palette is at the top of `styles.css`. The page and titles use the same serif font family. The root `font-size: 84%` scales the text; changing that value changes the overall text size. Specific heading sizes are defined lower down. The photograph's width is set by the `200px` column in `.page-grid` and the matching `max-width` on `.portrait img`.
 
 ## 4. Check an update
 
-Review the site on a wide screen and on your phone. Check the About/photo divider, the email, a paper resource link, the flower toggle, and any URLs you changed. If the GitHub site still shows an old version, check that the deployment finished, then refresh the page.
+Review the site on a wide screen and on your phone. Check the intro/photo divider, the email, a paper resource link, the flower toggle, and any URLs you changed. If the GitHub site still shows an old version, check that the deployment finished, then refresh the page.
 
-The website itself has no analytics, third-party scripts, font downloads, or embedded credentials. The paper PDFs, posters, slides, and pronunciation audio are **external links**, not files included in this ZIP. Check the sharing permissions of those linked documents before relying on public access.
+The website itself has no analytics, third-party scripts, font downloads, or embedded credentials. Its one script, at the bottom of `index.html`, does a single thing: it opens the section a menu link points to. With JavaScript switched off the menu still scrolls to each heading, and every heading still opens by being clicked. The paper PDFs, posters, slides, and pronunciation audio are **external links**, not files included in this ZIP. Check the sharing permissions of those linked documents before relying on public access.
 
 ## Official GitHub instructions
 
