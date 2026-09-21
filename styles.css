@@ -54,22 +54,18 @@ p { margin: 0 0 14px; }
 .page-grid {
   display: grid;
   grid-template-columns: minmax(0, 1fr) 200px;
+  /* Two independent columns: opening News cannot stretch the sections
+     beside it, and opening a section cannot move News. */
   grid-template-areas:
     "intro portrait"
-    "research news"
-    "experience news"
-    "teaching news"
-    "expository news";
+    "main  side";
   column-gap: 52px;
   align-items: start;
 }
 .page-grid > * { min-width: 0; }
 #intro { grid-area: intro; align-self: stretch; padding-bottom: 24px; border-bottom: 1px solid var(--rule); }
-#research { grid-area: research; }
-#experience { grid-area: experience; }
-#teaching { grid-area: teaching; }
-#expository { grid-area: expository; }
-#news { grid-area: news; }
+.column-main { grid-area: main; }
+.column-side { grid-area: side; }
 .portrait {
   grid-area: portrait;
   margin: 0;
@@ -120,6 +116,7 @@ p { margin: 0 0 14px; }
 .experience-entry a, .experience-entry a:visited, .teaching-entry a, .teaching-entry a:visited { color: inherit; }
 .teaching-entry .addiscoder, .teaching-entry .addiscoder:visited { color: var(--blue); }
 .reviewer { margin: 25px 0 0; }
+.reviewer strong { color: var(--black); font-size: 1.0625rem; } /* Matches the entry titles above it. */
 
 /* Native, accessible disclosures: every flower heading opens and closes its section. */
 .toggle > summary { list-style: none; cursor: pointer; width: fit-content; }
@@ -143,7 +140,7 @@ p { margin: 0 0 14px; }
   h1 { font-size: 2rem; }
   .page-grid {
     grid-template-columns: minmax(0, 1fr);
-    grid-template-areas: "portrait" "intro" "research" "experience" "teaching" "expository" "news";
+    grid-template-areas: "portrait" "intro" "main" "side";
     column-gap: 0;
   }
   .portrait { border: 0; padding: 0; margin-bottom: 26px; }
