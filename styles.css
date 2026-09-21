@@ -124,11 +124,7 @@ p { margin: 0 0 14px; }
 .teaching-entry .addiscoder, .teaching-entry .addiscoder:visited { color: var(--blue); }
 .featured-teaching-entry .entry-heading h3,
 .featured-teaching-entry .entry-heading h3 a,
-.featured-teaching-entry .entry-heading h3 a:visited,
-.featured-teaching-entry p,
-.featured-teaching-entry p a,
-.featured-teaching-entry p a:visited,
-.featured-teaching-entry .entry-heading .date { color: var(--muted-blue); }
+.featured-teaching-entry .entry-heading h3 a:visited { color: var(--muted-blue); }
 .reviewer { margin: 25px 0 0; }
 .reviewer strong { color: var(--black); font-size: 1.0625rem; } /* Matches the entry titles above it. */
 
