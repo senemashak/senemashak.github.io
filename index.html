@@ -14,15 +14,9 @@
 <body>
   <a class="skip-link" href="#intro">Skip to content</a>
   <div class="site">
-    <!-- NAME AND TOP NAVIGATION -->
+    <!-- NAME -->
     <header class="site-header">
       <h1>Senem Işık</h1>
-      <nav aria-label="Main navigation">
-        <a href="#research">Research</a>
-        <a href="#experience">Experience</a>
-        <a href="#teaching">Teaching</a>
-        <a href="#expository">Expository</a>
-      </nav>
     </header>
 
     <main class="page-grid">
@@ -218,7 +212,7 @@
       </details>
 
       <!-- EXPOSITORY: like every section, closed by default (no "open" attribute).
-           The top navigation opens it; click this heading to toggle it again. -->
+           Click the heading to toggle it. -->
       <details id="expository" class="section separated toggle">
         <summary title="Show or hide expository writing">
           <h2><img class="flower" src="favicon.svg" width="24" height="24" alt="">Expository</h2>
@@ -253,8 +247,8 @@
     </main>
   </div>
 
-  <!-- The only script on the site: a menu link opens the section it points to,
-       so a closed section expands instead of scrolling to a bare heading. -->
+  <!-- The only script on the site: an address such as .../#research arrives with
+       that section already open, so a shared link never lands on a closed heading. -->
   <script>
     (function () {
       function openSection(hash) {
@@ -264,14 +258,6 @@
         return target;
       }
 
-      var links = document.querySelectorAll('nav a[href^="#"]');
-      for (var i = 0; i < links.length; i++) {
-        links[i].addEventListener('click', function () {
-          openSection(this.getAttribute('href'));
-        });
-      }
-
-      // A shared address such as .../#research arrives with that section open.
       window.addEventListener('hashchange', function () { openSection(location.hash); });
       var landing = openSection(location.hash);
       if (landing) landing.scrollIntoView();

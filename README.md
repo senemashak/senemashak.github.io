@@ -6,7 +6,7 @@ This folder contains an editable static website prepared for **senemashak.github
 
 Extract the ZIP first, then open `index.html` in a web browser. Keep `styles.css`, both favicon files, and the `assets` folder next to it. The full-resolution photo is `assets/photo.png`.
 
-Click any flower heading — Research, News, Experience, Teaching, or Expository — to show or hide that section. All five start closed, and a link in the top menu opens the section it points to.
+Click any flower heading — Research, News, Experience, Teaching, or Expository — to show or hide that section. All five start closed. The page has no navigation menu; the headings themselves are the navigation.
 
 ## 2. Put the site on GitHub Pages
 
@@ -79,7 +79,7 @@ The palette is at the top of `styles.css`. The page and titles use the same seri
 
 Review the site on a wide screen and on your phone. Check the intro/photo divider, the email, a paper resource link, the flower toggle, and any URLs you changed. If the GitHub site still shows an old version, check that the deployment finished, then refresh the page.
 
-The website itself has no analytics, third-party scripts, font downloads, or embedded credentials. Its one script, at the bottom of `index.html`, does a single thing: it opens the section a menu link points to. With JavaScript switched off the menu still scrolls to each heading, and every heading still opens by being clicked. The paper PDFs, posters, slides, and pronunciation audio are **external links**, not files included in this ZIP. Check the sharing permissions of those linked documents before relying on public access.
+The website itself has no analytics, third-party scripts, font downloads, or embedded credentials. Its one script, at the bottom of `index.html`, does a single thing: when someone arrives at an address ending in `#research` or another section name, it opens that section. With JavaScript switched off, every heading still opens by being clicked. The paper PDFs, posters, slides, and pronunciation audio are **external links**, not files included in this ZIP. Check the sharing permissions of those linked documents before relying on public access.
 
 ## Official GitHub instructions
 
