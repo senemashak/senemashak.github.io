@@ -77,6 +77,7 @@ p { margin: 0 0 14px; }
 .portrait a { display: block; }
 .portrait img { display: block; width: 100%; max-width: 170px; height: auto; }
 .email { margin-top: 20px; margin-bottom: 0; }
+.email a, .email a:visited { color: var(--black); }
 .section { padding-top: 9px; scroll-margin-top: 24px; }
 #intro { scroll-margin-top: 24px; }
 .separated { margin-top: 9px; border-top: 1px solid var(--rule); }
