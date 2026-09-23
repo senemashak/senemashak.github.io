@@ -142,18 +142,6 @@ p { margin: 0 0 14px; }
 .writing-entry h3 { margin: 0 0 5px; font-size: 1.0625rem; font-weight: 400; }
 .writing-entry p { margin: 0; color: var(--soft-black); font-style: italic; }
 .writing-entry a, .writing-entry a:visited { color: inherit; }
-/* Closing photograph: spans the full content width, caption over its bottom-left corner. */
-.closing-photo { position: relative; margin: 48px 0 0; }
-.closing-photo img { display: block; width: 100%; height: auto; }
-.closing-photo figcaption {
-  position: absolute;
-  left: 18px;
-  bottom: 14px;
-  color: #fff;
-  font-size: 1.25rem;
-  font-style: italic;
-  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.55);
-}
 .skip-link { position: fixed; top: 8px; left: 8px; padding: 8px 14px; background: var(--background); z-index: 10; transform: translateY(-160%); }
 .skip-link:focus { transform: translateY(0); }
 
@@ -171,8 +159,6 @@ p { margin: 0 0 14px; }
   .portrait img { max-width: 170px; }
   #intro { padding-bottom: 25px; }
   .news { border-top: 1px solid var(--rule); margin-top: 30px; }
-  .closing-photo { margin-top: 36px; }
-  .closing-photo figcaption { left: 12px; bottom: 8px; font-size: 1rem; }
 }
 @media (max-width: 480px) {
   .entry-heading { display: block; }
