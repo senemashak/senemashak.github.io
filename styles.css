@@ -43,13 +43,13 @@ a:focus-visible, summary:focus-visible {
 .site-header { margin-bottom: 30px; }
 h1 {
   margin: 0;
-  font-size: 2.2rem;
+  font-size: 2.7rem;
   font-weight: 400;
   line-height: 1.2;
   letter-spacing: -0.035em;
   color: var(--black);
 }
-h2 { color: var(--green); font-weight: 400; font-size: 1.15rem; line-height: 1.3; margin: 0 0 16px; }
+h2 { color: var(--green); font-weight: 400; font-size: 1.4rem; line-height: 1.3; margin: 0 0 16px; }
 h3, h4 { color: var(--black); line-height: 1.4; }
 p { margin: 0 0 14px; }
 .page-grid {
@@ -133,7 +133,7 @@ p { margin: 0 0 14px; }
 .toggle > summary::-webkit-details-marker { display: none; }
 .toggle > summary::marker { content: ""; }
 .toggle > summary h2 { display: inline-flex; align-items: center; gap: 9px; margin: 0; }
-.toggle .flower { display: block; width: 20px; height: 20px; flex-shrink: 0; transition: transform 150ms ease; }
+.toggle .flower { display: block; width: 22px; height: 22px; flex-shrink: 0; transition: transform 150ms ease; }
 .toggle[open] > summary .flower { transform: rotate(30deg); }
 /* Breathing room between an open section's last line and the next divider. */
 .toggle-content { padding-top: 20px; padding-bottom: 20px; }
@@ -148,7 +148,7 @@ p { margin: 0 0 14px; }
 @media (max-width: 800px) {
   .site { padding: 24px 18px 56px; }
   .site-header { margin-bottom: 26px; }
-  h1 { font-size: 2rem; }
+  h1 { font-size: 2.4rem; }
   .page-grid {
     grid-template-columns: minmax(0, 1fr);
     grid-template-areas: "portrait" "intro" "main" "side";
