@@ -92,6 +92,7 @@ p { margin: 0 0 14px; }
 .paper { margin-bottom: 26px; }
 .paper:last-child { margin-bottom: 0; }
 .paper h3 { margin: 0 0 4px; font-size: 1.0625rem; font-weight: 700; }
+.paper h3 .title-joiner { font-weight: 400; } /* The "and" between two poster titles. */
 .paper p { margin: 0 0 3px; font-size: 0.96875rem; }
 .paper p:last-child { margin-bottom: 0; }
 .paper a, .paper a:visited { color: inherit; }
