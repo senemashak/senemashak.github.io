@@ -24,7 +24,9 @@ There is no need to connect GitHub to ChatGPT. This publishes a separate GitHub-
 index.html             All website text, research entries, and links
 styles.css             Fonts, colors, spacing, and responsive layout
 favicon.svg            Flower used in the tab and Expository toggle
-favicon.ico            Browser fallback for the same flower
+favicon.ico            Browser fallback for the same flower (16–256 px)
+favicon-192.png        High-resolution flower for phones and search results
+apple-touch-icon.png   iPhone/iPad home-screen flower
 assets/
   photo.png            Original 898 × 1282 photograph, unchanged
 files/
