@@ -12,7 +12,7 @@
   <link rel="icon" href="favicon.svg?v=2" type="image/svg+xml">
   <link rel="icon" href="favicon-192.png?v=2" type="image/png" sizes="192x192">
   <link rel="apple-touch-icon" href="apple-touch-icon.png?v=2">
-  <link rel="stylesheet" href="styles.css?v=20261030f">
+  <link rel="stylesheet" href="styles.css?v=20261030g">
   <!-- This portable reconstruction is documented in PROVENANCE.md. -->
 </head>
 <body>
@@ -308,7 +308,14 @@
       if (landing) landing.scrollIntoView();
 
       fitNews();
-      window.addEventListener('resize', fitNews);
+      // Phones fire resize while the address bar hides on scroll; refit only when
+      // the width changes, or the page jumps mid-scroll.
+      var lastWidth = window.innerWidth;
+      window.addEventListener('resize', function () {
+        if (window.innerWidth === lastWidth) return;
+        lastWidth = window.innerWidth;
+        fitNews();
+      });
       document.getElementById('news').addEventListener('toggle', fitNews);
     })();
   </script>

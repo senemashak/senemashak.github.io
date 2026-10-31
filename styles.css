@@ -127,7 +127,9 @@ p { margin: 0 0 14px; }
 .news-list p { margin: 0; }
 /* The script caps the list at its first few items; the rest scroll inside it.
    The styled scrollbar stays visible so readers can tell there is more. */
-.news-list.scrolling { overflow-y: auto; overscroll-behavior: contain; padding-right: 14px; }
+/* No overscroll containment: at either end of the list, a swipe carries on to
+   scroll the page, so phones never get stuck on the News box. */
+.news-list.scrolling { overflow-y: auto; padding-right: 14px; }
 .news-list.scrolling::-webkit-scrollbar { width: 10px; }
 .news-list.scrolling::-webkit-scrollbar-track { background: var(--rule); border-radius: 5px; margin-block: 48px; } /* Margins shorten the bar. */
 .news-list.scrolling::-webkit-scrollbar-thumb { background: var(--muted); border-radius: 5px; }
