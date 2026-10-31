@@ -12,7 +12,7 @@
   <link rel="icon" href="favicon.svg?v=2" type="image/svg+xml">
   <link rel="icon" href="favicon-192.png?v=2" type="image/png" sizes="192x192">
   <link rel="apple-touch-icon" href="apple-touch-icon.png?v=2">
-  <link rel="stylesheet" href="styles.css?v=20261012">
+  <link rel="stylesheet" href="styles.css?v=20261030">
   <!-- This portable reconstruction is documented in PROVENANCE.md. -->
 </head>
 <body>
@@ -42,54 +42,84 @@
       <!-- LEFT COLUMN: the flower sections, stacked. -->
       <div class="column-main">
 
-      <!-- RESEARCH: copy an entire article.paper block to add a paper. -->
+      <!-- RESEARCH: copy an entire article.paper block into the right group to add a paper. -->
       <details id="research" class="section toggle" open>
         <summary title="Show or hide research">
           <h2 id="research-heading"><img class="flower" src="favicon.svg" width="20" height="20" alt="">Research</h2>
         </summary>
         <div class="toggle-content">
-        <article class="paper">
-          <h3>Bayesian Learning in Online Decision Making</h3>
-          <p class="authors"><span class="alpha-beta">(α–β)</span> <a href="https://aamanihamedani.github.io/">Alireza AmaniHamedani</a>, <a href="https://www.aaouad.com/">Ali Aouad</a>, <strong>SI</strong>, <a href="https://stanford.edu/~saberi/">Amin Saberi</a></p>
-          <p class="venue"><em><a href="https://datascience.stanford.edu/events/computational-market-design-center/market-design-age-ai">The Stanford Market Design in the Age of AI Conference</a></em> (2026)</p>
-          <p class="venue"><a href="https://learning-augmented-algorithms.github.io/"><em>SIGMETRICS Workshop on Learning-augmented Algorithms: Theory and Applications</em> (LATA’26)</a></p>
-          <p class="venue"><a href="https://dravy.ttic.edu/lamp26.html#best-poster"><em>TTIC Learning-driven Algorithms and Machine-aided Proofs</em> (LAMP’26)</a> <a class="award" href="https://dravy.ttic.edu/lamp26.html#best-poster">Best Poster Award</a></p>
-          <p class="status"><em>Preprint forthcoming</em></p>
-          <p class="resources"><a href="https://dl.acm.org/doi/abs/10.1145/3848038.3848059">[extended abstract]</a> <a href="files/Bayesian_Learning_in_Online_Decision_Making.pdf">[poster]</a></p>
-        </article>
+        <!-- Paper views: the checked radio decides which groups show (CSS only).
+             "Selected" is checked on arrival; "All" shows every group with its heading. -->
+        <input class="paper-view" type="radio" name="paper-view" id="view-all">
+        <input class="paper-view" type="radio" name="paper-view" id="view-selected" checked>
+        <input class="paper-view" type="radio" name="paper-view" id="view-working">
+        <div class="paper-filter" aria-label="Show papers">
+          <label for="view-all">All</label>
+          <label for="view-selected">Selected</label>
+          <label for="view-working">Working Papers</label>
+        </div>
 
-        <article class="paper">
-          <h3>PocketGraph: Just-in-Time Knowledge Graphs for Efficient RAG</h3>
-          <p class="authors"><strong>SI</strong>, <a href="https://theory.stanford.edu/~nmishra/">Nina Mishra</a>, <a href="https://supriyanagesh94.github.io/">Supriya Nagesh</a>, <a href="https://stanford.edu/~saberi/">Amin Saberi</a>, <a href="https://talwagner.github.io/">Tal Wagner</a></p>
-          <p class="note"><em>Work done while interning at Amazon Science</em></p>
-          <p class="status"><em>Preprint forthcoming</em></p>
-        </article>
+        <section class="paper-group group-selected">
+          <h3 class="subheading">Selected</h3>
+          <article class="paper">
+            <h3>Bayesian Learning in Online Decision Making</h3>
+            <p class="authors"><span class="alpha-beta">(α–β)</span> <a href="https://aamanihamedani.github.io/">Alireza AmaniHamedani</a>, <a href="https://www.aaouad.com/">Ali Aouad</a>, <strong>SI</strong>, <a href="https://stanford.edu/~saberi/">Amin Saberi</a></p>
+            <p class="venue"><em><a href="https://datascience.stanford.edu/events/computational-market-design-center/market-design-age-ai">The Stanford Market Design in the Age of AI Conference</a></em> (2026)</p>
+            <p class="venue"><a href="https://learning-augmented-algorithms.github.io/"><em>SIGMETRICS Workshop on Learning-augmented Algorithms: Theory and Applications</em> (LATA’26)</a></p>
+            <p class="venue"><a href="https://dravy.ttic.edu/lamp26.html#best-poster"><em>TTIC Learning-driven Algorithms and Machine-aided Proofs</em> (LAMP’26)</a> <a class="award" href="https://dravy.ttic.edu/lamp26.html#best-poster">Best Poster Award</a></p>
+            <p class="status"><em>Preprint forthcoming</em></p>
+            <p class="resources"><a href="https://dl.acm.org/doi/abs/10.1145/3848038.3848059">[extended abstract]</a> <a href="files/Bayesian_Learning_in_Online_Decision_Making.pdf">[poster]</a></p>
+          </article>
 
-        <article class="paper">
-          <h3><a href="https://arxiv.org/abs/2501.11226">Local Limits of Small-World Networks</a></h3>
-          <p class="authors"><span class="alpha-beta">(α–β)</span> <a href="https://yalimohammadi.github.io/">Yeganeh Alimohammadi</a>, <strong>SI</strong>, <a href="https://stanford.edu/~saberi/">Amin Saberi</a></p>
-          <p class="venue">Preliminary version at a workshop in <a href="https://ec24.sigecom.org/"><em>the 25th ACM Conference on Economics and Computation</em> (EC’24)</a></p>
-          <p class="status">In submission to the <em>Advances in Applied Probability</em> Journal</p>
-          <p class="resources"><a href="https://arxiv.org/abs/2501.11226">[arXiv]</a> <a href="files/local-limits-small-world-networks-poster.pdf">[poster]</a></p>
-        </article>
+          <article class="paper">
+            <h3>PocketGraph: Just-in-Time Knowledge Graphs for Efficient RAG</h3>
+            <p class="authors"><strong>SI</strong>, <a href="https://theory.stanford.edu/~nmishra/">Nina Mishra</a>, <a href="https://supriyanagesh94.github.io/">Supriya Nagesh</a>, <a href="https://stanford.edu/~saberi/">Amin Saberi</a>, <a href="https://talwagner.github.io/">Tal Wagner</a></p>
+            <p class="note"><em>Work done while interning at Amazon Science</em></p>
+            <p class="status"><em>Preprint forthcoming</em></p>
+          </article>
+        </section>
 
-        <article class="paper">
-          <h3><a href="https://arxiv.org/abs/2411.09640">Random Lipschitz functions on graphs with weak expansion</a></h3>
-          <p class="authors"><span class="alpha-beta">(α–β)</span> <strong>SI</strong>, <a href="https://sites.google.com/view/jinyoungpark">Jinyoung Park</a></p>
-          <p class="venue">Presentation at <a href="https://meetings.ams.org/math/jmm2025/meetingapp.cgi/Paper/46006"><em>Joint Mathematics Meetings</em> (JMM’25)</a></p>
-          <p class="status">Major revision at the <em>Combinatorics, Probability and Computing</em> Journal</p>
-          <p class="resources"><a href="https://arxiv.org/abs/2411.09640">[arXiv]</a> <a href="files/random-lipschitz-functions-poster.pdf">[poster]</a> <a href="files/random-lipschitz-functions-slides.pdf">[slides]</a></p>
-        </article>
+        <section class="paper-group group-working">
+          <h3 class="subheading">Working Papers</h3>
+          <article class="paper">
+            <h3>What Online Algorithms Can Transformers Learn In-Context?</h3>
+            <p class="authors"><span class="alpha-beta">(α–β)</span> <a href="https://nicochristianson.com/">Nico Christianson</a>, <strong>SI</strong>, <a href="https://stanford.edu/~saberi/">Amin Saberi</a>, <a href="https://vitercik.github.io/">Ellen Vitercik</a></p>
+          </article>
 
-        <article class="paper">
-          <h3><a href="files/epidemiological-processes-poster.pdf">Theoretical analyses of epidemiological processes on graphs</a> <span class="title-joiner">and</span> <a href="files/antidote-allocation-poster.pdf">Improving the convex program for antidote allocation</a></h3>
-          <!-- Uma Dayal's original URL was malformed; see PROVENANCE.md. -->
-          <p class="authors"><span class="alpha-beta">(α–β)</span> Uma Dayal, <a href="https://margalitglasgow.github.io/">Margalit Glasgow</a>, <strong>SI</strong>, <a href="https://sites.google.com/site/marywootters/">Mary Wootters</a></p>
-          <!-- CURIS is deliberately not linked to the unrelated JMM URL in the old source. -->
-          <p class="venue">Presentations at <em>Stanford Computer Science Research</em> (CURIS’21)</p>
-          <p class="note">The antidote allocation poster received the <span class="award">Outstanding Poster Award</span></p>
-          <p class="resources"><a href="files/epidemiological-processes-poster.pdf">[epidemic models poster]</a> <a href="files/antidote-allocation-poster.pdf">[antidote allocation poster]</a></p>
-        </article>
+          <article class="paper">
+            <h3>Query Lower Bounds for Maximal Independent Sets</h3>
+            <p class="authors"><span class="alpha-beta">(α–β)</span> <a href="https://behnezhad.com/">Soheil Behnezhad</a>, <a href="https://almaghafari.github.io/">Alma Ghafari</a>, <strong>SI</strong>, <a href="https://mohammadroghani.github.io/">Mohammad Roghani</a></p>
+          </article>
+        </section>
+
+        <section class="paper-group group-undergrad">
+          <h3 class="subheading">From Undergraduate</h3>
+          <article class="paper">
+            <h3><a href="https://arxiv.org/abs/2501.11226">Local Limits of Small-World Networks</a></h3>
+            <p class="authors"><span class="alpha-beta">(α–β)</span> <a href="https://yalimohammadi.github.io/">Yeganeh Alimohammadi</a>, <strong>SI</strong>, <a href="https://stanford.edu/~saberi/">Amin Saberi</a></p>
+            <p class="venue">Preliminary version at a workshop in <a href="https://ec24.sigecom.org/"><em>the 25th ACM Conference on Economics and Computation</em> (EC’24)</a></p>
+            <p class="status">In submission to the <em>Advances in Applied Probability</em> Journal</p>
+            <p class="resources"><a href="https://arxiv.org/abs/2501.11226">[arXiv]</a> <a href="files/local-limits-small-world-networks-poster.pdf">[poster]</a></p>
+          </article>
+
+          <article class="paper">
+            <h3><a href="https://arxiv.org/abs/2411.09640">Random Lipschitz functions on graphs with weak expansion</a></h3>
+            <p class="authors"><span class="alpha-beta">(α–β)</span> <strong>SI</strong>, <a href="https://sites.google.com/view/jinyoungpark">Jinyoung Park</a></p>
+            <p class="venue">Presentation at <a href="https://meetings.ams.org/math/jmm2025/meetingapp.cgi/Paper/46006"><em>Joint Mathematics Meetings</em> (JMM’25)</a></p>
+            <p class="status">Major revision at the <em>Combinatorics, Probability and Computing</em> Journal</p>
+            <p class="resources"><a href="https://arxiv.org/abs/2411.09640">[arXiv]</a> <a href="files/random-lipschitz-functions-poster.pdf">[poster]</a> <a href="files/random-lipschitz-functions-slides.pdf">[slides]</a></p>
+          </article>
+
+          <article class="paper">
+            <h3><a href="files/epidemiological-processes-poster.pdf">Theoretical analyses of epidemiological processes on graphs</a> <span class="title-joiner">and</span> <a href="files/antidote-allocation-poster.pdf">Improving the convex program for antidote allocation</a></h3>
+            <!-- Uma Dayal's original URL was malformed; see PROVENANCE.md. -->
+            <p class="authors"><span class="alpha-beta">(α–β)</span> Uma Dayal, <a href="https://margalitglasgow.github.io/">Margalit Glasgow</a>, <strong>SI</strong>, <a href="https://sites.google.com/site/marywootters/">Mary Wootters</a></p>
+            <!-- CURIS is deliberately not linked to the unrelated JMM URL in the old source. -->
+            <p class="venue">Presentations at <em>Stanford Computer Science Research</em> (CURIS’21)</p>
+            <p class="note">The antidote allocation poster received the <span class="award">Outstanding Poster Award</span></p>
+            <p class="resources"><a href="files/epidemiological-processes-poster.pdf">[epidemic models poster]</a> <a href="files/antidote-allocation-poster.pdf">[antidote allocation poster]</a></p>
+          </article>
+        </section>
         </div>
       </details>
 

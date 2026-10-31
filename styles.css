@@ -103,6 +103,25 @@ p { margin: 0 0 14px; }
 .venue, .status, .resources, .note { color: var(--soft-black); }
 .alpha-beta { color: var(--soft-black); } /* The alphabetical-order marker, not the names. */
 
+/* Research views: All / Selected / Working Papers. Hidden radios drive the labels
+   and groups; Selected is checked on arrival. Group headings show only under All. */
+.paper-view { position: absolute; opacity: 0; width: 1px; height: 1px; margin: 0; pointer-events: none; }
+.paper-filter { display: flex; flex-wrap: wrap; gap: 4px 18px; margin: 0 0 22px; font-size: 0.96875rem; }
+.paper-filter label { color: var(--muted); cursor: pointer; text-underline-offset: 0.25em; }
+.paper-filter label:hover { color: var(--text); text-decoration: underline; }
+#view-all:checked ~ .paper-filter [for="view-all"],
+#view-selected:checked ~ .paper-filter [for="view-selected"],
+#view-working:checked ~ .paper-filter [for="view-working"] { color: var(--black); text-decoration: underline; text-decoration-color: var(--orange); }
+#view-all:focus-visible ~ .paper-filter [for="view-all"],
+#view-selected:focus-visible ~ .paper-filter [for="view-selected"],
+#view-working:focus-visible ~ .paper-filter [for="view-working"] { outline: 2px solid var(--blue); outline-offset: 4px; border-radius: 2px; }
+#view-selected:checked ~ .paper-group:not(.group-selected),
+#view-working:checked ~ .paper-group:not(.group-working) { display: none; }
+#view-selected:checked ~ .paper-group .subheading,
+#view-working:checked ~ .paper-group .subheading { display: none; }
+.paper-group .subheading { margin: 0 0 17px; }
+#view-all:checked ~ .paper-group + .paper-group { margin-top: 34px; }
+
 /* News remains below the full portrait on desktop. */
 .news { font-size: 0.9375rem; }
 .news-list { list-style: none; margin: 0; padding: 0; }
@@ -177,4 +196,7 @@ p { margin: 0 0 14px; }
   .page-grid { display: block; }
   .portrait { display: none; }
   .paper, .experience-entry, .teaching-entry, .writing-entry { break-inside: avoid; }
+  .paper-filter { display: none; }
+  .paper-group { display: block !important; margin-top: 24px; }
+  .paper-group .subheading { display: block !important; }
 }
