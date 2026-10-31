@@ -129,6 +129,15 @@ p { margin: 0 0 14px; }
 .news-list li:last-child { margin-bottom: 0; }
 .news-list time { display: block; margin-bottom: 3px; color: var(--muted); font-size: 0.84375rem; }
 .news-list p { margin: 0; }
+/* The script caps the list at its first few items; the rest scroll inside it.
+   The styled scrollbar stays visible so readers can tell there is more. */
+.news-list.scrolling { overflow-y: auto; overscroll-behavior: contain; padding-right: 10px; }
+.news-list.scrolling::-webkit-scrollbar { width: 6px; }
+.news-list.scrolling::-webkit-scrollbar-track { background: var(--rule); border-radius: 3px; }
+.news-list.scrolling::-webkit-scrollbar-thumb { background: var(--muted); border-radius: 3px; }
+@supports not selector(::-webkit-scrollbar) {
+  .news-list.scrolling { scrollbar-width: thin; scrollbar-color: var(--muted) var(--rule); }
+}
 
 /* Experience subsection headings are bold orange; entry titles are bold black. */
 .subheading { margin: 25px 0 17px; color: var(--orange); font-size: 1.125rem; font-weight: 700; }
@@ -197,6 +206,7 @@ p { margin: 0 0 14px; }
   .portrait { display: none; }
   .paper, .experience-entry, .teaching-entry, .writing-entry { break-inside: avoid; }
   .paper-filter { display: none; }
+  .news-list.scrolling { max-height: none !important; overflow: visible; }
   .paper-group { display: block !important; margin-top: 24px; }
   .paper-group .subheading { display: block !important; }
 }
