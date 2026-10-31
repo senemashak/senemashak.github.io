@@ -64,7 +64,7 @@ p { margin: 0 0 14px; }
   align-items: start;
 }
 .page-grid > * { min-width: 0; }
-#intro { grid-area: intro; align-self: stretch; padding-bottom: 24px; border-bottom: 1px solid var(--rule); }
+#intro { grid-area: intro; font-size: 1.075rem; align-self: stretch; padding-bottom: 24px; border-bottom: 1px solid var(--rule); }
 .column-main { grid-area: main; }
 .column-side { grid-area: side; }
 .portrait {
@@ -127,12 +127,12 @@ p { margin: 0 0 14px; }
 .news-list p { margin: 0; }
 /* The script caps the list at its first few items; the rest scroll inside it.
    The styled scrollbar stays visible so readers can tell there is more. */
-.news-list.scrolling { overflow-y: auto; overscroll-behavior: contain; padding-right: 10px; }
-.news-list.scrolling::-webkit-scrollbar { width: 6px; }
-.news-list.scrolling::-webkit-scrollbar-track { background: var(--rule); border-radius: 3px; }
-.news-list.scrolling::-webkit-scrollbar-thumb { background: var(--muted); border-radius: 3px; }
+.news-list.scrolling { overflow-y: auto; overscroll-behavior: contain; padding-right: 14px; }
+.news-list.scrolling::-webkit-scrollbar { width: 10px; }
+.news-list.scrolling::-webkit-scrollbar-track { background: var(--rule); border-radius: 5px; margin-block: 48px; } /* Margins shorten the bar. */
+.news-list.scrolling::-webkit-scrollbar-thumb { background: var(--muted); border-radius: 5px; }
 @supports not selector(::-webkit-scrollbar) {
-  .news-list.scrolling { scrollbar-width: thin; scrollbar-color: var(--muted) var(--rule); }
+  .news-list.scrolling { scrollbar-width: auto; scrollbar-color: var(--muted) var(--rule); }
 }
 
 /* Experience subsection headings are bold orange; entry titles are bold black. */
@@ -176,14 +176,14 @@ p { margin: 0 0 14px; }
   h1 { font-size: 2.4rem; }
   .page-grid {
     grid-template-columns: minmax(0, 1fr);
-    grid-template-areas: "portrait" "intro" "main" "side";
+    grid-template-areas: "portrait" "intro" "side" "main"; /* News above Research on phones. */
     column-gap: 0;
   }
   .portrait { border: 0; padding: 0; margin-bottom: 26px; max-width: none; }
   .portrait a { width: min(170px, 100%); margin-inline: auto; }
   .portrait img { max-width: 170px; }
   #intro { padding-bottom: 25px; }
-  .news { border-top: 1px solid var(--rule); margin-top: 30px; }
+  .column-main { margin-top: 24px; border-top: 1px solid var(--rule); }
 }
 @media (max-width: 480px) {
   .entry-heading { display: block; }
