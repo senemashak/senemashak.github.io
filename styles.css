@@ -109,7 +109,7 @@ p { margin: 0 0 14px; }
 /* Research views: All / Selected. Hidden radios drive the labels
    and groups; Selected is checked on arrival. Group headings show only under All. */
 .paper-view { position: absolute; opacity: 0; width: 1px; height: 1px; margin: 0; pointer-events: none; }
-.paper-filter { display: flex; flex-wrap: wrap; gap: 4px 18px; margin: 0 0 22px; font-size: 0.96875rem; }
+.paper-filter { display: flex; flex-wrap: wrap; gap: 4px 22px; margin: 0 0 22px; font-size: 1.2rem; }
 .paper-filter label { color: var(--muted); cursor: pointer; text-underline-offset: 0.25em; }
 .paper-filter label:hover { color: var(--text); text-decoration: underline; }
 #view-all:checked ~ .paper-filter [for="view-all"],
