@@ -147,6 +147,7 @@ p { margin: 0 0 14px; }
 .experience-entry:last-child, .teaching-entry:last-child { margin-bottom: 0; }
 .entry-heading { display: flex; justify-content: space-between; align-items: baseline; gap: 8px 20px; flex-wrap: wrap; }
 .entry-heading h3, .entry-heading h4 { margin: 0 0 2px; font-size: 1.0625rem; font-weight: 700; flex: 1 1 210px; }
+.entry-heading .entry-aside { font-weight: 400; } /* A note beside an entry title, e.g. a company description. */
 .entry-heading .date { margin-left: auto; color: var(--muted); font-size: 0.84375rem; white-space: nowrap; }
 .experience-entry p, .teaching-entry p { margin: 0; }
 .experience-entry p, .teaching-entry p { color: var(--soft-black); }
