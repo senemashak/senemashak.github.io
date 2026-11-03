@@ -98,6 +98,9 @@ p { margin: 0 0 14px; }
 .paper a, .paper a:visited { color: inherit; }
 .paper .award, .paper .award:visited, .award { color: var(--orange); }
 .resources a + a { margin-left: 7px; }
+/* Venues listed under a "Preliminary version … appeared at" line, indented. */
+.venue-list { list-style: none; margin: 0 0 3px; padding-left: 1.5em; color: var(--soft-black); font-size: 0.96875rem; }
+.venue-list li { margin: 0 0 3px; }
 /* Supporting lines — venues, status, instructors, the email — sit a shade
    lighter than the body text. */
 .venue, .status, .resources, .note { color: var(--soft-black); }
