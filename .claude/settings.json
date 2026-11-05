@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(\"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome\" --headless --disable-gpu --no-sandbox --window-size=1440,600 --screenshot=shot3.png \"file:///Users/senemisik/Desktop/senemashak-github-website/index.html\")",
+      "Bash(sed -i '' 's/^\\\\.section { padding-top: 14px;/.section { padding-top: 9px;/; s/^\\\\.separated { margin-top: 16px;/.separated { margin-top: 9px;/' styles.css)",
+      "Bash(\"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome\" --headless --disable-gpu --no-sandbox --window-size=1440,600 --screenshot=shot4.png \"file:///Users/senemisik/Desktop/senemashak-github-website/index.html\")",
+      "Bash(sed -i '' -e 's/minmax\\(0, 1fr\\) 120px/minmax\\(0, 1fr\\) 140px/' -e 's/max-width: 120px/max-width: 140px/g' -e 's/width: min\\(120px, 100%\\)/width: min\\(140px, 100%\\)/' -e 's/--stanford-red: #4d0808;/--stanford-red: #5e0d0d;/' -e 's/font-size: 1.4rem; line-height: 1.3/font-size: 1.15rem; line-height: 1.3/' -e 's/\\\\.toggle \\\\.flower { display: block; width: 24px; height: 24px;/.toggle .flower { display: block; width: 20px; height: 20px;/' styles.css)",
+      "Bash(sed -i '' 's/class=\"flower\" src=\"favicon.svg\" width=\"24\" height=\"24\"/class=\"flower\" src=\"favicon.svg\" width=\"20\" height=\"20\"/g' index.html)",
+      "Bash(\"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome\" --headless --disable-gpu --no-sandbox --window-size=1440,600 --screenshot=shot5.png \"file:///Users/senemisik/Desktop/senemashak-github-website/index.html\")",
+      "Bash(git commit -q -m ' *)"
+    ]
+  }
+}
